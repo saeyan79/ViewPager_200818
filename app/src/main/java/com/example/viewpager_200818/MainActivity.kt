@@ -2,10 +2,13 @@ package com.example.viewpager_200818
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.viewpager_200818.adapters.MainViewPagerAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
 
-
+lateinit var mMainPagerAdapter :
+        MainViewPagerAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +19,8 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setValues() {
-
+        mMainPagerAdapter = MainViewPagerAdapter(supportFragmentManager)
+        mainViewPager.adapter = mMainPagerAdapter
     }
 
     override fun setupEvents() {

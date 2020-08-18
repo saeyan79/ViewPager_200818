@@ -21,6 +21,8 @@ lateinit var mMainPagerAdapter :
     override fun setValues() {
         mMainPagerAdapter = MainViewPagerAdapter(supportFragmentManager)
         mainViewPager.adapter = mMainPagerAdapter
+
+        tabLayout.setupWithViewPager(mainViewPager)
     }
 
     override fun setupEvents() {
